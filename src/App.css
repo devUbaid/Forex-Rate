@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #171717;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.forex-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #242424;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.forex-heading {
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  color: #F0B90B; 
+}
+
+.currency-selection {
+  margin-bottom: 20px;
+}
+
+.currency-selection label {
+  display: block;
+  margin: 15px 0;
+  color: #F0B90B;
+  font-size: 15px;
+}
+
+.currency-selection select {
+  width: 80%;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #F0B90B;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  color: #F0B90B;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.usd-box {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.usd-box h2 {
+  font-size: 1.5em;
+  color: #F0B90B;
+}
+
+.loading {
+  margin: 20px;
+  color: #F0B90B; 
+  font-size: 1.2em;
+}
+
+.refresh-button {
+  background-color: #F0B90B;
+  color: #171717;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  width: 80%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.refresh-button:hover {
+  background-color: #fff;
+  color: #F0B90B;
+}
+
+@media (max-width: 600px) {
+  .forex-container {
+    max-width: 90%; 
   }
-  to {
-    transform: rotate(360deg);
+
+  .forex-heading {
+    font-size: 2em;
+  }
+
+  .currency-selection select {
+    width: 100%;
   }
 }
